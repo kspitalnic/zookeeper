@@ -7,7 +7,7 @@ app.listen(3001, () => {
     console.log(`API server now on port 3001!`);
   });
 
-const { clients } = require('./data/p');
+const { programs } = require('./data/p');
 
 function filterByQuery(query, clientArray) {
     let filteredResults = clientArray;
@@ -25,7 +25,7 @@ function filterByQuery(query, clientArray) {
 
 
   app.get('/api/p', (req, res) => {
-    let results = clients;
+    let results = programs;
     if (req.query) {
       results = filterByQuery(req.query, results);
     }
