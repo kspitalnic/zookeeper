@@ -2,28 +2,30 @@ const express = require('express');
 
 const app = express();
 
+
 app.listen(3001, () => {
     console.log(`API server now on port 3001!`);
   });
 
-const { skis } = require('./data/animals');
+const { clients } = require('./data/p');
 
-function filterByQuery(query, skiArray) {
-    let filteredResults = skiArray;
-    if (query.id) {
-      filteredResults = filteredResults.filter(ski => ski.id === query.id);
+function filterByQuery(query, clientArray) {
+    let filteredResults = clientArray;
+    if (query.name) {
+      filteredResults = filteredResults.filter(client => client.name === query.name);
     }
-    if (query.din) {
-      filteredResults = filteredResults.filter(ski => ski.din === query.din);
+    if (query.program) {
+      filteredResults = filteredResults.filter(client => client.program === query.program);
     }
-    if (query.sole) {
-      filteredResults = filteredResults.filter(ski => ski.sole === query.sole);
+    if (query.day) {
+      filteredResults = filteredResults.filter(client => client.day === query.day);
     }
     return filteredResults;
   }
 
-  app.get('/api/animals', (req, res) => {
-    let results = skis;
+
+  app.get('/api/p', (req, res) => {
+    let results = clients;
     if (req.query) {
       results = filterByQuery(req.query, results);
     }
