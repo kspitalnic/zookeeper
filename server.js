@@ -4,10 +4,10 @@ const app = express();
 
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}!`);
-  });
+  console.log(`API server now on port ${PORT}!`);
+});
 
-const { programs } = require('./data/p');
+const { clients } = require('./data/p');
 
 function filterByQuery(query, clientArray) {
     let filteredResults = clientArray;
@@ -23,11 +23,20 @@ function filterByQuery(query, clientArray) {
     return filteredResults;
   }
 
+  function findById(name, clientArray) {
+    const result = clientArray.filter(client => client.name === name)[0];
+    return result;
+  }
 
   app.get('/api/p', (req, res) => {
     let results = programs;
     if (req.query) {
-      results = filterByQuery(req.query, results);
+      results = filterByQuery(req.query, clients);
     }
     res.json(results);
+  });
+
+  app.get('/api/p/:id', (req, res) => {
+    const result = findById(req.params.id, clients);
+      res.json(result);
   });
