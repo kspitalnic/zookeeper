@@ -1,0 +1,76 @@
+{
+  "clients": [
+    {
+      "name": "Yawgoo McGoo",
+      "program": "Mini Trackers",
+      "day": "Wednesday",
+      "time": "4:30",
+      "shoe": "22.5",
+      "ski": "117'",
+      "height": "4'2",
+      "weight": "75",
+      "notes": "",
+      "id": "0"
+    },
+    {
+      "name": "Yoo Goo",
+      "program": "Mini Trackers",
+      "day": "Wednesday",
+      "time": "4:30",
+      "shoe": "22.5",
+      "ski": "117'",
+      "height": "3'4",
+      "weight": "60",
+      "notes": "wide boot",
+      "id": "1"
+    },
+    {
+      "name": "Yawgoo",
+      "program": "Mini Shredders",
+      "day": "Thursday",
+      "time": "4:30",
+      "shoe": "22.5",
+      "ski": "117'",
+      "height": "4'",
+      "weight": "88",
+      "notes": "",
+      "id": "2"
+    },
+    {
+      "name": "McGoo",
+      "program": "Trackers",
+      "day": "Wednesday",
+      "time": "4:45",
+      "shoe": "22.5",
+      "ski": "117'",
+      "height": "5'4",
+      "weight": "120",
+      "notes": "",
+      "id": "3"
+    },
+    {
+      "name": "Katie Spit",
+      "program": "Grown-up shredders",
+      "day": "Thursday",
+      "time": "5:45",
+      "shoe": "25.5",
+      "ski": "137'",
+      "height": "5'4",
+      "weight": "120",
+      "notes": "post request test",
+      "id": "4"
+    },
+    {
+      "name": "Katie Spit",
+      "program": "Grown-up shredders",
+      "day": "Thursday",
+      "time": "5:45",
+      "shoe": "25.5",
+      "ski": "137'",
+      "height": "5'4",
+      "weight": "120",
+      "notes": "post request test",
+      "id": "5"
+    }
+  ]
+}
